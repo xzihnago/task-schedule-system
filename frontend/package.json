@@ -1,0 +1,13 @@
+{
+  "type": "module",
+  "scripts": {
+    "dev:build": "tsc --noEmit && tsup",
+    "dev:watch": "tsup --watch src/**/*.ts",
+    "dev:check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/bootstrap": "^5.2.10",
+    "axios": "^1.10.0",
+    "tsup": "^8.5.0"
+  }
+}

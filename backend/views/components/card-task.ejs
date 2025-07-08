@@ -1,0 +1,29 @@
+<% if ((permission & 1) === 1) { %>
+  <button
+    class="btn btn-primary"
+    id="button-task-add"
+    type="button"
+    data-bs-toggle="modal"
+    data-bs-target="#modal-task"
+  >
+    新增工項
+  </button>
+<% } %>
+
+<table
+  class="table table-bordered table-striped table-hover rel-content align-middle"
+>
+  <thead>
+    <tr>
+      <th hidden></th>
+      <th>日期</th>
+      <th>工項</th>
+      <th>內容</th>
+      <th>負責人</th>
+      <th>校內對應</th>
+      <th>大會對應</th>
+      <th>編輯</th>
+    </tr>
+  </thead>
+  <tbody id="tbody-task"></tbody>
+</table>
