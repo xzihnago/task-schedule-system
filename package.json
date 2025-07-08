@@ -1,0 +1,18 @@
+{
+  "type": "module",
+  "version": "0.1.0",
+  "scripts": {
+    "dev:watch": "pnpm run -r dev:watch",
+    "dev:check": "pnpm run -r dev:check",
+    "package:eslint": "eslint **/src/**",
+    "package:prettier": "prettier -c **/src/**",
+    "package:bump-dependencies": "pnpm up -r -L"
+  },
+  "devDependencies": {
+    "eslint": "^9.30.1",
+    "eslint-config-prettier": "^10.1.5",
+    "prettier": "3.6.2",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.36.0"
+  }
+}
