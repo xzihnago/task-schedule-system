@@ -44,11 +44,11 @@
       </div>
 
       <div class="modal-footer justify-content-between">
-        <% if ((permission & 1) === 1) { %>
         <div class="flex-grow-1">
+          <% if ((permission & 1) === 1) { %>
           <button class="btn btn-danger" id="button-task-delete" type="button" data-bs-dismiss="modal">刪除</button>
+          <% } %>
         </div>
-        <% } %>
 
         <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">取消</button>
         <button class="btn btn-warning" type="submit">確定</button>
