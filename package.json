@@ -1,6 +1,6 @@
 {
   "type": "module",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "scripts": {
     "dev:watch": "pnpm run -r dev:watch",
     "dev:check": "pnpm run -r dev:check",
