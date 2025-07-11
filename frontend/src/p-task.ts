@@ -106,12 +106,12 @@ const initTaskTable = async () => {
       (task) => `
           <tr style="height: 55px">
             <td hidden>${task.id}</td>
-            <td>${task.date ?? ""}</td>
+            <td style="width: 1px; white-space: nowrap">${task.date ?? ""}</td>
             <td>${task.title}</td>
-            <td>${task.content}</td>
-            <td>${window.users.find((user) => user.id === task.responsibleId)?.nickname ?? ""}</td>
-            <td>${task.internalStatus}</td>
-            <td>${task.externalStatus}</td>
+            <td style="white-space: pre-wrap">${task.content}</td>
+            <td style="width: 1px; white-space: nowrap">${window.users.find((user) => user.id === task.responsibleId)?.nickname ?? ""}</td>
+            <td style="white-space: pre-wrap">${task.internalStatus}</td>
+            <td style="white-space: pre-wrap">${task.externalStatus}</td>
             <td style="width: 1px; white-space: nowrap">${
               task.editable
                 ? `<button class="btn btn-warning button-task-edit" type="button" data-bs-toggle="modal" data-bs-target="#modal-task" name="${task.id}">編輯</button>`

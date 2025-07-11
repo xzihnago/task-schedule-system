@@ -1,5 +1,5 @@
 <div class="modal fade" id="modal-task" data-bs-backdrop="static">
-  <div class="modal-dialog modal-dialog-scrollable">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg">
     <form class="modal-content" id="form-task">
       <div class="modal-header">
         <h5 class="modal-title">編輯</h5>
@@ -21,7 +21,7 @@
 
           <div class="d-flex">
             <label class="col-2 m-auto text-center" for="input-content">內容</label>
-            <textarea class="form-control" id="input-content" placeholder="請輸入內容" rows="3"></textarea>
+            <textarea class="form-control text-nowrap" id="input-content" placeholder="請輸入內容" rows="5"></textarea>
           </div>
 
           <% if ((permission & 1) === 1) { %>
@@ -33,12 +33,12 @@
 
           <div class="d-flex">
             <label class="col-2 m-auto text-center" for="input-internal-status">校內對應</label>
-            <textarea class="form-control" id="input-internal-status" placeholder="請輸入校內對應" rows="3"></textarea>
+            <textarea class="form-control text-nowrap" id="input-internal-status" placeholder="請輸入校內對應" rows="5"></textarea>
           </div>
 
           <div class="d-flex">
             <label class="col-2 m-auto text-center" for="input-external-status">大會對應</label>
-            <textarea class="form-control" id="input-external-status" placeholder="請輸入大會對應" rows="3"></textarea>
+            <textarea class="form-control text-nowrap" id="input-external-status" placeholder="請輸入大會對應" rows="5"></textarea>
           </div>
         </div>
       </div>
