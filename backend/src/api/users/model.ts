@@ -1,7 +1,8 @@
 export const findAllUser = async () =>
-  await prisma.user.findMany({
+  prisma.user.findMany({
     select: {
       id: true,
+      permissions: true,
       nickname: true,
     },
   });

@@ -7,7 +7,19 @@ import * as model from "./model";
 
 export const findAllUser: RequestHandler = async (_, res) => {
   const users = await model.findAllUser();
-  res.ok(users);
+
+  const result = users
+    .sort((a, b) =>
+      b.permissions === a.permissions
+        ? b.nickname.localeCompare(a.nickname)
+        : b.permissions - a.permissions
+    )
+    .map((user) => ({
+      id: user.id,
+      nickname: user.nickname,
+    }));
+
+  res.ok(result);
 };
 
 export const login: RequestHandler<
@@ -27,7 +39,7 @@ export const login: RequestHandler<
   const token = jwt.sign(
     { id: user.id, username: req.body.username, permissions: user.permissions },
     env.JWT_SECRET,
-    { expiresIn: 100 * 60 }
+    { expiresIn: 48 * 60 * 60 }
   );
 
   res

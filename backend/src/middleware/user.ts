@@ -23,7 +23,7 @@ export const authentication: Middleware = (req, res, next) => {
       permissions: req.user.permissions,
     },
     env.JWT_SECRET,
-    { expiresIn: 100 * 60 }
+    { expiresIn: 48 * 60 * 60 }
   );
 
   res.cookie("token", tokenRefresh, {
@@ -47,8 +47,7 @@ export const permission: Middleware<[flag: PermissionBits]> =
 
 export enum PermissionBits {
   MANAGE_TASK = 1,
-  MANAGE_KEY = 2,
-  MANAGE_VENUE = 4,
+  MANAGE_FILE = 2,
 }
 
 declare module "express-serve-static-core" {
