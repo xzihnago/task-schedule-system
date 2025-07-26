@@ -11,7 +11,7 @@ document
     formData.append("file", inputFile.files?.[0] ?? new Blob());
 
     axios
-      .post("/api/keys", formData)
+      .post("/api/files/keys", formData)
       .then(() => {
         window.location.reload();
       })
