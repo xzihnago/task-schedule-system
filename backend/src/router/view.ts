@@ -29,6 +29,20 @@ router.get("/:year/venue", user.authentication, (req, res) => {
   });
 });
 
+router.get("/:year/activity-center", user.authentication, (req, res) => {
+  res.render("common", {
+    permission: req.user.permissions,
+    components: ["card-activity-center"],
+  });
+});
+
+router.get("/:year/entrance", user.authentication, (req, res) => {
+  res.render("common", {
+    permission: req.user.permissions,
+    components: ["card-entrance"],
+  });
+});
+
 router.get(/^(?!\/api(?:\/|$)).*/, (_, res) => {
   res.redirect(`/`);
 });

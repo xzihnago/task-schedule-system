@@ -18,4 +18,18 @@ router.post(
   controller.uploadVenues
 );
 
+router.post(
+  "/activity-center",
+  user.authentication,
+  user.permission(PermissionBits.MANAGE_FILE),
+  controller.uploadActivityCenter
+);
+
+router.post(
+  "/entrance",
+  user.authentication,
+  user.permission(PermissionBits.MANAGE_FILE),
+  controller.uploadEntrance
+);
+
 export default router;
